@@ -6,7 +6,7 @@ Library of JavaScript functions for validating SIREN & SIRET Numbers of french e
 
 ### Manual
 
-Download the raw content directly from [GitHub](https://raw.githubusercontent.com/aminnairi/libsiren/master/libsiren.js).
+Download the raw content directly from [GitHub](https://raw.githubusercontent.com/aminnairi/libsiren/master/libsiren.js) (right-click & save as `libsiren.js`).
 
 ### Curl
 
