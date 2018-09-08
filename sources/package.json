@@ -5,6 +5,7 @@
   },
   "devDependencies": {
     "rollup": "^0.65.2",
+    "rollup-plugin-cleaner": "^0.2.0",
     "rollup-plugin-typescript2": "^0.17.0",
     "rollup-plugin-uglify": "^5.0.2",
     "typescript": "^3.0.3"
