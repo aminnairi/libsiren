@@ -1,5 +1,6 @@
 import typescript from 'rollup-plugin-typescript2'
 import clean from 'rollup-plugin-cleaner'
+import license from 'rollup-plugin-license'
 
 import { uglify } from 'rollup-plugin-uglify'
 
@@ -11,13 +12,9 @@ export default {
     file: '../libsiren.js'
   },
   plugins: [
-    clean({
-      targets: [
-        '../libsiren.js',
-        '../libsiren.d.ts'
-      ]
-    }),
+    clean({ targets: [ '../libsiren.js', '../libsiren.d.ts' ] }),
     typescript(),
-    uglify()
+    uglify(),
+    license({ banner: 'GNU GENERAL PUBLIC LICENSE Version 3' })
   ]
 }
