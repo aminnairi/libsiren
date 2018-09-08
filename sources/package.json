@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "build": "rollup -c"
+    "build": "rollup -c && node clean.js"
   },
   "devDependencies": {
     "rollup": "^0.65.2",
