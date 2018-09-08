@@ -1,2 +1,3 @@
 declare function isValidSiren(target: any): boolean;
-export { isValidSiren };
+declare function isValidSiret(target: any): boolean;
+export { isValidSiren, isValidSiret };
