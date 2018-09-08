@@ -25,6 +25,7 @@ $ curl -OL https://raw.githubusercontent.com/aminnairi/libsiren/master/libsiren.
     <script src='./libsiren.js'></script>
     <script>
     const { isValidSiren, isValidSiret } = libsiren
+
     console.log(isValidSiren(123456789))
     console.log(isValidSiret(12345678901234))
     </script>
@@ -38,6 +39,7 @@ $ curl -OL https://raw.githubusercontent.com/aminnairi/libsiren/master/libsiren.
 
 ```javascript
 const { isValidSiren, isValidSiret } = require('./libsiren.js')
+
 console.log(isValidSiren(123456789))
 console.log(isValidSiret(12345678901234))
 ```
@@ -46,6 +48,7 @@ console.log(isValidSiret(12345678901234))
 
 ```javascript
 import { isValidSiren, isValidSiret } from './libsiren.js'
+
 console.log(isValidSiren(123456789))
 console.log(isValidSiret(12345678901234))
 ```
