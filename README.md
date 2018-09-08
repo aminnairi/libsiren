@@ -2,19 +2,19 @@
 
 Library of JavaScript functions for validating SIREN & SIRET Numbers of french entreprises.
 
-## Installation
+## Download
 
-### Web
+### Manual
 
-Download the file [`libsiren.js`](./libsiren.js).
+Download the raw content directly from [GitHub](https://raw.githubusercontent.com/aminnairi/libsiren/master/libsiren.js).
 
-### Node
+### Curl
 
-NPM | Yarn
----|---
-`npm install @aminnairi/libsiren` | `yarn add @aminnairi/libsiren`
+```shell
+$ curl -OL https://raw.githubusercontent.com/aminnairi/libsiren/master/libsiren.js
+```
 
-## Import
+## Usage
 
 ### Web
 
@@ -23,33 +23,39 @@ NPM | Yarn
 <html>
   <body>
     <script src='./libsiren.js'></script>
+    <script>
+    const { isValidSiren, isValidSiret } = libsiren
+    console.log(isValidSiren(123456789))
+    console.log(isValidSiret(12345678901234))
+    </script>
   </body>
 </html>
 ```
 
-### CommonJS
+### Node
+
+#### CommonJS
 
 ```javascript
-const { isValidSiren } = require('@aminnairi/libsiren')
+const { isValidSiren, isValidSiret } = require('./libsiren.js')
+console.log(isValidSiren(123456789))
+console.log(isValidSiret(12345678901234))
 ```
 
-### ESModule
+#### ESModule
 
 ```javascript
-import { isValidSiren } from '@aminnairi/libsiren'
-```
-
-## Usage
-
-```javascript
-isValidSiren(123456789)
-isValidSiren('123 456 789')
+import { isValidSiren, isValidSiret } from './libsiren.js'
+console.log(isValidSiren(123456789))
+console.log(isValidSiret(12345678901234))
 ```
 
 ## Examples
 
 ```javascript
-console.log(isValidSiren(424576965))      // true
-console.log(isValidSiren('424 576 965'))  // true
-console.log(isValidSiren('424 576 966'))  // false
+isValidSiren(123456789)
+isValidSiren('123 456 789')
+
+isValidSiret(12345678901234)
+isValidSiret('123 456 789 01234')
 ```
