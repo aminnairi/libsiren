@@ -1,1 +1,2 @@
-export declare const isValidSiren: any;
+declare function isValidSiren(target: any): boolean;
+export { isValidSiren };

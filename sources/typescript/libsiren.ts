@@ -62,12 +62,18 @@ function isModulo10(target: number): boolean {
   return false
 }
 
-export const isValidSiren = pipe(
-  anyToString,
-  spread,
-  stringToInteger,
-  doubleIfOddIndex,
-  addDigits,
-  sum,
-  isModulo10
-)
+function isValidSiren(target: any): boolean {
+  const check = pipe(
+    anyToString,
+    spread,
+    stringToInteger,
+    doubleIfOddIndex,
+    addDigits,
+    sum,
+    isModulo10
+  )
+
+  return check(target)
+}
+
+export { isValidSiren }
