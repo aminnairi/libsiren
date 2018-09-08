@@ -1,0 +1,9 @@
+{
+  "name": "@aminnairi/libsiren",
+  "version": "0.1.0",
+  "main": "./libsiren.js",
+  "types": "./libsiren.d.ts",
+  "repository": "git@github.com:aminnairi/libsiren",
+  "author": "Amin NAIRI",
+  "license": "GPL-3.0-or-later"
+}
