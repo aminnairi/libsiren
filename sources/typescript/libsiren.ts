@@ -18,6 +18,10 @@ function anyToString(target: any): string {
   return target
 }
 
+function removeSpaces(target: string): string {
+  return target.replace(/\s/g, '')
+}
+
 function spread(target: string): Array<string> {
   return [...target]
 }
@@ -65,6 +69,7 @@ function isModulo10(target: number): boolean {
 function isValidSiren(target: any): boolean {
   const check = pipe(
     anyToString,
+    removeSpaces,
     spread,
     stringToInteger,
     doubleIfOddIndex,
