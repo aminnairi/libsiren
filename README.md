@@ -1,6 +1,6 @@
 # libsiren
 
-Library of JavaScript functions for validation SIREN & SIRET Numbers for french entreprises.
+Library of JavaScript functions for validating SIREN & SIRET Numbers of french entreprises.
 
 ## Installation
 
