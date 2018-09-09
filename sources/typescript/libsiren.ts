@@ -11,7 +11,6 @@ import { isModulo10 } from "./isModulo10";
 import { hasLengthOf } from "./hasLengthOf";
 
 function isValidSiren(target: any): boolean {
-
   const hasValidLength = pipe(
     anyToString,
     removeSpaces,
