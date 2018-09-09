@@ -6,7 +6,7 @@ import { stringToInteger } from "./stringToInteger";
 import { doubleIfOddIndex } from "./doubleIfOddIndex";
 import { doubleIfEvenIndex } from "./doubleIfEvenIndex";
 import { addDigits } from "./addDigits";
-import sum from "./sum";
+import { sum } from "./sum";
 import { isModulo10 } from "./isModulo10";
 import { hasLengthOf } from "./hasLengthOf";
 
