@@ -1,7 +1,15 @@
+//@ts-check
 const { readdir, unlink } = require('fs')
 const { resolve } = require('path')
 
-const fromRoot = endpoint => resolve(__dirname, '..', endpoint || '.')
+/**
+ * @description Return the correct project path from a relative path
+ * @param {string} endpoint
+ * @return {string}
+ */
+function fromRoot(endpoint = '.') {
+  return resolve(__dirname, '..', endpoint)
+}
 
 readdir(fromRoot(), function(error, paths) {
   if (error) {
