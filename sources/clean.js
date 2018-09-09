@@ -1,21 +1,26 @@
-const fs = require('fs')
+const { readdir, unlink } = require('fs')
+const { resolve } = require('path')
 
-fs.readdir('../', function(error, files) {
+const fromRoot = endpoint => resolve(__dirname, '..', endpoint || '.')
+
+readdir(fromRoot(), function(error, paths) {
   if (error) {
     throw 'Unable to delete unwanted definition types'
   }
 
-  files.filter(function(file) {
-    if (file.endsWith('.d.ts') && !file.startsWith('libsiren')) {
+  paths.filter(function(path) {
+    if (path.endsWith('.d.ts') && !path.startsWith('libsiren')) {
       return true
     }
 
     return false
-  }).map(function(file) {
-    fs.unlink(`../${file}`, function(error) {
+  }).map(function(path) {
+    unlink(fromRoot(path), function(error) {
       if (error) {
-        throw `Unable to delete ${file} (${error})`
+        throw `Unable to delete ${path} (${error})`
       }
+
+      console.log(`[CLEAN] successfully removed "${path}".`)
     })
   })
 })
