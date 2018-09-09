@@ -19,7 +19,6 @@ import { isValidSiren, isValidSiret } from '@aminnairi/libsiren'
 // CommonJS
 const { isValidSiren, isValidSiret } = require('@aminnairi/libsiren')
 
-
 isValidSiren(123456789)
 isValidSiret(12345678901234)
 ```
